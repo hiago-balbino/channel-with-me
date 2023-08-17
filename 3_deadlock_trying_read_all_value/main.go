@@ -6,22 +6,22 @@ import (
 )
 
 func main() {
-	s := []int{1, 2, 3}
-	c := make(chan int)
+	numbers := []int{1, 2, 3}
+	result := make(chan int)
 
-	go sum(s, c)
+	go sum(numbers, result)
 
-	fmt.Println(<-c)
-	fmt.Println(<-c)
-	fmt.Println(<-c)
-	fmt.Println(<-c) // deadlock happens here
+	fmt.Println(<-result)
+	fmt.Println(<-result)
+	fmt.Println(<-result)
+	fmt.Println(<-result) // deadlock happens here
 }
 
-func sum(s []int, c chan int) {
+func sum(numbers []int, result chan int) {
 	sum := 0
-	for _, v := range s {
-		sum += v
+	for _, number := range numbers {
+		sum += number
 		time.Sleep(time.Second * 2)
-		c <- sum
+		result <- sum
 	}
 }

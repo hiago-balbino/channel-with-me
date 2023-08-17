@@ -6,21 +6,21 @@ import (
 )
 
 func main() {
-	s := []int{1, 2, 3}
+	numbers := []int{1, 2, 3}
+	result := make(chan int)
 
-	c := make(chan int)
-	go sum(s, c)
+	go sum(numbers, result)
 
-	for sum := range c {
+	for sum := range result {
 		fmt.Println(sum)
 	}
 }
 
-func sum(s []int, c chan int) {
+func sum(numbers []int, result chan int) {
 	sum := 0
-	for _, v := range s {
-		sum += v
+	for _, number := range numbers {
+		sum += number
 		time.Sleep(time.Second * 2)
-		c <- sum
+		result <- sum
 	}
 }
