@@ -6,22 +6,21 @@ import (
 )
 
 func main() {
-	numbers := []int{1, 2, 3}
-	result := make(chan int)
+	word := "chan"
+	letters := make(chan rune)
 
-	go sum(numbers, result)
+	go readWordToLetters(word, letters)
 
-	fmt.Println(<-result)
-	fmt.Println(<-result)
-	fmt.Println(<-result)
-	fmt.Println(<-result) // deadlock happens here
+	fmt.Println(<-letters)
+	fmt.Println(<-letters)
+	fmt.Println(<-letters)
+	fmt.Println(<-letters)
+	fmt.Println(<-letters) // deadlock happens here
 }
 
-func sum(numbers []int, result chan int) {
-	sum := 0
-	for _, number := range numbers {
-		sum += number
+func readWordToLetters(word string, letters chan rune) {
+	for _, letter := range word {
 		time.Sleep(time.Second * 2)
-		result <- sum
+		letters <- letter
 	}
 }

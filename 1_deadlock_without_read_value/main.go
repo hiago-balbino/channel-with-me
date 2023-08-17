@@ -6,18 +6,16 @@ import (
 )
 
 func main() {
-	numbers := []int{1, 2, 3}
-	result := make(chan int)
+	word := "channel"
+	letters := make(chan rune)
 
-	go sum(numbers, result)
+	go readWordToLetters(word, letters)
 
-	fmt.Println(<-result)
+	fmt.Println(<-letters)
 }
 
-func sum(numbers []int, result chan int) {
-	sum := 0
-	for _, number := range numbers {
-		sum += number
+func readWordToLetters(word string, letters chan rune) {
+	for range word {
 		time.Sleep(time.Second * 2)
 	}
 }
