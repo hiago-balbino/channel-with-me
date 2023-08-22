@@ -36,11 +36,11 @@ example_5:
 	@go run 5_deadlock_trying_read_all_values_from_channel_using_range_for_loop/main.go
 
 ## --------------------------------------------
-## > example_6: Here we have fixed the crash and the most important bit we are saying the goroutine which is responsible to send data to also tell us when you are done sending data closing the channel. Ranging over a channel is an all inclusive operation which reads if data exists but stops if the channel is closed. We have also decoupled read operation from write. Even if the size of word increases, we do not worry about screwing up the read logic.
-## See: 6_reading_all_values_from_channel_range/main.go
+## example_6: Reading all values from channel using range for loop
+## See folder: 6_reading_all_values_from_channel_using_range_for_loop
 ## Run: make example_6
 example_6:
-	@go run 6_reading_all_values_from_channel_range/main.go
+	@go run 6_reading_all_values_from_channel_using_range_for_loop/main.go
 
 ## --------------------------------------------
 ## example_7: Reading values from a buffered channel
