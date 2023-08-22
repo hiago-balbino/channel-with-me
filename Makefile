@@ -8,8 +8,8 @@ example_1:
 	@go run 1_deadlock_without_read_value/main.go
 
 ## --------------------------------------------
-## > example_2: Here as before the main gorountine was waiting on reading from a channel and hoping that some other goroutine would send data. We sent all the letters to channel, but we got only one element printed because we read only once from the channel. 
-## See: 2_reading_only_one_value/main.go
+## example_2: Reading only one value
+## See folder: 2_reading_only_one_value 
 ## Run: make example_2
 example_2:
 	@go run 2_reading_only_one_value/main.go
