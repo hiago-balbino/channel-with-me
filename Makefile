@@ -43,6 +43,13 @@ example_6:
 	@go run 6_reading_all_values_from_channel_range/main.go
 
 ## --------------------------------------------
+## example_7: Reading values from a buffered channel
+## See folder: 7_reading_values_from_buffered_channel
+## Run: make example_7
+example_7:
+	@go run 7_reading_values_from_buffered_channel/main.go
+
+## --------------------------------------------
 
 help:
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
