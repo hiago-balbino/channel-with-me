@@ -15,11 +15,11 @@ example_2:
 	@go run 2_reading_only_one_value/main.go
 
 ## --------------------------------------------
-## > example_3: In this example we are reading from a channel which has no more data to be read. It would read first 4 elements and block forever while trying to read for a 5th element which never appears. 
-## See: 3_deadlock_trying_read_all_value/main.go
+## example_3: Deadlock trying read all values
+## See folder: 3_deadlock_trying_read_all_values 
 ## Run: make example_3
 example_3:
-	@go run 3_deadlock_trying_read_all_value/main.go
+	@go run 3_deadlock_trying_read_all_values/main.go
 
 ## --------------------------------------------
 ## > example_4: Given we are reading from the channel as many times as the length of the word variable, we can read all the values, but this code is not elegant enought.
