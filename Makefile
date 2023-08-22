@@ -22,11 +22,11 @@ example_3:
 	@go run 3_deadlock_trying_read_all_values/main.go
 
 ## --------------------------------------------
-## > example_4: Given we are reading from the channel as many times as the length of the word variable, we can read all the values, but this code is not elegant enought.
-## See: 4_reading_all_values_from_slice_range/main.go
+## example_4: Reading all values from channel using for loop
+## See folder: 4_reading_all_values_from_channel_using_for_loop
 ## Run: make example_4
 example_4:
-	@go run 4_reading_all_values_from_slice_range/main.go
+	@go run 4_reading_all_values_from_channel_using_for_loop/main.go
 
 ## --------------------------------------------
 ## > example_5: Here we had a crash because we are ranging over the channel continously reading from it. As we know, reading from a channel is a blocking operating. Once we have real all data from the channel the main goroutine enters blocking state.
