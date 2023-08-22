@@ -1,8 +1,8 @@
 .PHONY: help example_1 example_2 example_3
 
 ## --------------------------------------------
-## > example_1: In this example, we are trying to read from a channel that will never be written. In Go, if all goroutines are in blocking state forever it will try to crash the progem. A blocking goroutine can only be unblocked by an operation make in another goroutine. 
-## See: 1_deadlock_without_read_value/main.go
+## example_1: Deadlock without read value
+## See folder: 1_deadlock_without_read_value
 ## Run: make example_1
 example_1:
 	@go run 1_deadlock_without_read_value/main.go
