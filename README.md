@@ -12,6 +12,7 @@ Each folder has a single test example and a brief explanation of the logic or er
 * [Deadlock trying read all values from channel using range for loop](./5_deadlock_trying_read_all_values_from_channel_using_range_for_loop)
 * [Reading all values from channel using range for loop](./6_reading_all_values_from_channel_using_range_for_loop)
 * [Reading values from a buffered channel](./7_reading_values_from_buffered_channel)
+* [Simple gracefull shutdown](./8_simple_gracefull_shutdown)
 
 ### Run to see all examples command
 

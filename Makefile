@@ -50,6 +50,12 @@ example_7:
 	@go run 7_reading_values_from_buffered_channel/main.go
 
 ## --------------------------------------------
+## example_8: Simple gracefull shutdown
+## See folder: 8_simple_gracefull_shutdown
+## Run: make example_8
+example_8:
+	@go run 8_simple_gracefull_shutdown/main.go
+## --------------------------------------------
 
 help:
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
