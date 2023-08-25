@@ -50,11 +50,11 @@ example_7:
 	@go run 7_reading_values_from_buffered_channel/main.go
 
 ## --------------------------------------------
-## example_8: Simple gracefull shutdown
-## See folder: 8_simple_gracefull_shutdown
+## example_8: Simple graceful shutdown
+## See folder: 8_simple_graceful_shutdown
 ## Run: make example_8
 example_8:
-	@go run 8_simple_gracefull_shutdown/main.go
+	@go run 8_simple_graceful_shutdown/main.go
 ## --------------------------------------------
 
 help:

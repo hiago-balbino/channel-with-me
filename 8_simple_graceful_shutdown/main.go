@@ -20,14 +20,14 @@ func main() {
 
 	go func(ctx context.Context) {
 		defer wg.Done()
-		gracefullShutdown(ctx)
+		gracefulShutdown(ctx)
 	}(ctxTimeout)
 
 	wg.Wait()
 	fmt.Println("finishing main goroutine")
 }
 
-func gracefullShutdown(ctx context.Context) {
+func gracefulShutdown(ctx context.Context) {
 	signalChan := make(chan os.Signal, 1)
 	signal.Notify(signalChan, syscall.SIGINT, syscall.SIGTERM)
 
@@ -39,7 +39,7 @@ func gracefullShutdown(ctx context.Context) {
 		case <-signalChan:
 			fmt.Println("finishing the process because it was interrupted")
 			return
-		case <-time.After(time.Second * 2):
+		case <-time.After(2 * time.Second):
 			fmt.Println("ay!")
 		}
 	}
