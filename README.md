@@ -13,6 +13,7 @@ Each folder has a single test example and a brief explanation of the logic or er
 * [Reading all values from channel using range for loop](./6_reading_all_values_from_channel_using_range_for_loop)
 * [Reading values from a buffered channel](./7_reading_values_from_buffered_channel)
 * [Simple graceful shutdown](./8_simple_graceful_shutdown)
+* [Reading all value from channel using select](./9_reading_values_from_channel_using_select)
 
 ### Run to see all examples command
 

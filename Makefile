@@ -1,4 +1,4 @@
-.PHONY: help example_1 example_2 example_3
+.PHONY: help example_1 example_2 example_3 example_4 example_5 example_6 example_7 example_8 example_9
 
 ## --------------------------------------------
 ## example_1: Deadlock without read value
@@ -55,6 +55,13 @@ example_7:
 ## Run: make example_8
 example_8:
 	@go run 8_simple_graceful_shutdown/main.go
+
+## --------------------------------------------
+## example_9: Reading values from channel using select
+## See folder: 9_reading_values_from_channel_using_select
+## Run: make example_9
+example_9:
+	@go run 9_reading_values_from_channel_using_select/main.go
 ## --------------------------------------------
 
 help:
